@@ -1,0 +1,120 @@
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes assou {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 800;
+    animation: fadeIn 1s ease;
+    box-shadow: none;
+}
+
+/* Remove highlight azul em todos os elementos */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a{
+	text-decoration: none;
+	cursor: pointer;
+}
+li{
+	list-style-type: none;
+}
+
+:root{
+    --amareloflash: #FFF201;
+    --laranjaflash: #FF9600;
+    --douradoflash: #FFAB00;
+    --primeirovermelho: #FE0001;
+    --segundovermelho: #FD0002;
+    --terceirovermelho: #C30101;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+/* --------------*/
+.topo{
+  border: 1px solid blue;
+}
+
+.logo{
+  width: 20%;
+}
+
+
+/* botao de salvar */
+
+.whatsapp-float {
+  position: fixed;
+  right: 30px;            
+  bottom: 30px;          
+  width: 60px;          
+  height: 60px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  z-index: 9;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  transition: transform .18s ease, box-shadow .18s ease;
+  text-decoration: none;
+  opacity: 0;
+  animation: assou 2s ease-out forwards;
+  animation-delay: 1s;
+}
+
+/* hover / foco */
+.whatsapp-float:hover,
+.whatsapp-float:focus {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.22);
+  outline: none;
+}
+
+@media (min-width: 992px){
+  .whatsapp-float{
+    width: 3.5vw;
+    height: 3.5vw;
+  }
+}
+
+.formtabela{
+    border: none;
+}
+
+.inputflash{
+    border: 1px solid var(--primeirovermelho);
+    width: 50%;
+    margin: 0 auto;
+    transition: transform 0.3 ease;
+}
+
+.inputflash:hover, .inputflash:focus, .inputflash:active{
+    border: 1px solid var(--terceirovermelho);
+    box-shadow: none;
+    transform: scale(1.05);
+}
+
+.btngerar{
+    border: 1px solid var(--douradoflash);
+    width: 50%;
+    margin: 0 auto;
+    background-color: var(--amareloflash);
+}
+
