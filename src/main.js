@@ -23,10 +23,7 @@ document.querySelector('#app').innerHTML = `
   </header>
 
   <section>
-        <div id="tableResult" class="tabelagerada"></div>
-        <div id="fixedHScroll" class="fixed-hscroll" aria-hidden="false">
-          <div class="hscroll-inner" id="hscrollInner"></div>
-        </div>
+        <div id="tableResult" class="tabelagerada">A sua tabela será gerada aqui.......</div>
   </section>
 
   <div id="whatsapp-float" class="whatsapp-float" >
