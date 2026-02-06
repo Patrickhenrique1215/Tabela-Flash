@@ -9,14 +9,14 @@ form.addEventListener("submit", function (event) {
     const cols = parseInt(document.getElementById("cols").value);
 
     let table = `
-        <table class="table table-bordered table-striped tableflash" >
+        <table class="tableflash">
         <tbody>
     `;
 
     for (let i = 0; i < rows; i++) {
         table += "<tr>";
         for (let j = 0; j < cols; j++) {
-        table += `<td contenteditable="true" ></td>`;
+        table += `<td contenteditable ></td>`;
         }
         table += "</tr>";
     }
@@ -28,4 +28,8 @@ form.addEventListener("submit", function (event) {
 
     tableResult.innerHTML = table;
 });
+
+
+
+
 
