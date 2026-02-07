@@ -6,8 +6,14 @@
 }
 
 @keyframes assou {
-    from { opacity: 0;}
-    to { opacity: 1;}
+  from { 
+    opacity: 0;
+    transform: translateY(0px);  /* Cancela o translateY da fadeIn */
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0px);  /* Garante posição final */
+  }
 }
 
 
@@ -115,6 +121,10 @@ body {
   margin-bottom: 50vh;
 }
 
+.asua{
+  color: gray;
+}
+
 .tableflash{
   width: 100%;
   border-collapse: collapse;
@@ -152,6 +162,7 @@ td{
   box-shadow: 0 6px 18px rgba(0,0,0,0.18);
   transition: transform .18s ease, box-shadow .18s ease;
   text-decoration: none;
+  opacity: 0;
   animation: assou 2s ease-out forwards;
   animation-delay: 1s;
   border: 1px solid var(--terceirovermelho);
@@ -199,12 +210,25 @@ td{
   border-bottom: 4px solid black;
 }
 
-.close{
-  background-color: transparent;
-  border: none;
+.divclose{
   display: flex;
   flex-direction: row-reverse;
+  align-items: center;
+}
+
+.close{
+  width: 8%;
+  background-color: transparent;
+  border: none;
   font-size: 1.2rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, border-color 0.5s ease;
+}
+
+.close:hover{
+  transform: scale(1.1);
+  border-color: gray;
 }
 
 .group-title{
@@ -255,8 +279,8 @@ td{
     padding: 0 1rem;
   }
 
-  .tabelagerada{
-   
+  .modal{
+    width: 50%;
   }
 }
 

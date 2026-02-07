@@ -1,6 +1,7 @@
 import './style.scss'
 import './gerador.js'
 import './mensagemdecarregamento.js'
+import './botaosalvar.js'
 import './modal.js'
 
 document.querySelector('#app').innerHTML = `
@@ -26,7 +27,7 @@ document.querySelector('#app').innerHTML = `
   </header>
 
   <section>
-        <div id="tableResult" class="tabelagerada">A sua tabela será gerada aqui.......</div>
+        <div id="tableResult" class="tabelagerada"><span class="asua">A sua tabela será gerada aqui.......</span></div>
   </section>
 
   <div id="whatsapp-float" class="whatsapp-float" >
@@ -35,7 +36,7 @@ document.querySelector('#app').innerHTML = `
 
   <div class="overlay" id="overlay">
     <div class="modal">
-        <button class="close" id="closeModal">x</button>
+        <div class="divclose"><button class="close" id="closeModal">x</button></div>
          <div id="group-documents" class="download-group documents">
             <h3 class="group-title">📄 Documentos</h3>
             <div class="button-group">
