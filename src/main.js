@@ -1,8 +1,11 @@
 import './style.scss'
+import './gerador.js'
+import './mensagemdecarregamento.js'
+import './salvamento.js'
 
 document.querySelector('#app').innerHTML = `
  <header class="topo">
-    <img class="logo" src="src/images/logo.png" alt="logotipo de tabela flash">
+    <img class="logo" src="/logo.png" alt="logotipo de tabela flash">
     <div class="table-generator">
       <form id="tableForm" class="formtabela">
         <div class="qt">
