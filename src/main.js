@@ -26,8 +26,16 @@ document.querySelector('#app').innerHTML = `
     </div>
   </header>
 
+  <div class="overlayspinner">
+    <div id="spinner" class="cxspinner">
+      <div class="spinner"></div>
+      <div class="textspinner">Aguarde...<br>Gerando tabela...</div>
+    </div>
+    
+  </div>  
+
   <section>
-        <div id="tableResult" class="tabelagerada"><span class="asua">A sua tabela será gerada aqui.......</span></div>
+    <div id="tableResult" class="tabelagerada"><span class="asua">A sua tabela será gerada aqui.......</span></div>
   </section>
 
   <div id="whatsapp-float" class="whatsapp-float" >

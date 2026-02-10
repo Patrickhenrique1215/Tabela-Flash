@@ -212,6 +212,42 @@ body {
 }
 
 
+/* ======== SPINNER      ======*/
+.overlayspinner {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  backdrop-filter: blur(2px);
+}
+
+.overlayspinner.active{
+  display: flex;
+}
+
+.spinner { 
+  border: 6px solid rgba(56, 57, 52, 1);
+  border-top: 6px solid #e01717;
+  border-radius: 50%; 
+  width: 60px; 
+  height: 60px; 
+  animation: spin 1s linear infinite; 
+  margin: 50px auto; 
+  
+} 
+
+.textspinner{
+  color: gray;
+  text-align: center;
+  line-height: 50px;
+  font-size: 1.3rem;
+  margin-top: 40vh;
+  
+}
+
+@keyframes spin { 
+  0% { transform: rotate(0deg); } 
+  100% { transform: rotate(360deg); } 
+}
 
 /* ======== TABELA GERADA  ======*/
 .tabelagerada {
@@ -477,6 +513,10 @@ td{
   .btngerar {
     width: auto;
     padding: 0 1rem;
+  }
+
+  .textspinner{
+    margin-top: 0;
   }
 
   .modal{
