@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", function (event) {
         event.preventDefault();
 
+        const overlay = document.querySelector(".overlayspinner");
+        overlay.style.display = "flex";
+
         const rows = parseInt(document.getElementById("rows").value);
         const cols = parseInt(document.getElementById("cols").value);
         const totalCells = rows * cols;
@@ -45,15 +48,12 @@ document.addEventListener("DOMContentLoaded", () => {
             if (cellIndex < totalCells){
                 requestAnimationFrame(generateChunk);
             } else {
-                console.log("Tabela completa");
+                overlay.style.display = "none";
             }
 
         }
 
-        requestAnimationFrame(generateChunk)
-
-
-
+        requestAnimationFrame(generateChunk);
 
 
 
@@ -77,5 +77,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         tableResult.innerHTML = table;
     });*/
+
+
+
+
+
     });
 });    

@@ -86,22 +86,10 @@ document.querySelector('#app').innerHTML = `
                 <button id="btn-jsonl" class="download-btn data" data-format="jsonl">JSONL</button>
                 <button id="btn-xml" class="download-btn data" data-format="xml">XML</button>
                 <button id="btn-sql" class="download-btn data" data-format="sql">SQL</button>
-                <button id="btn-db" class="download-btn data" data-format="db">DB</button>
-                <button id="btn-sqlite" class="download-btn data" data-format="sqlite">SQLITE</button>
             </div>
         </div>
 
-        <div id="group-bigdata" class="download-group bigdata">
-            <h3 class="group-title">🧪 Big Data / Científico</h3>
-            <div class="button-group">
-                <button id="btn-parquet" class="download-btn bigdata" data-format="parquet">PARQUET</button>
-                <button id="btn-orc" class="download-btn bigdata" data-format="orc">ORC</button>
-                <button id="btn-avro" class="download-btn bigdata" data-format="avro">AVRO</button>
-                <button id="btn-feather" class="download-btn bigdata" data-format="feather">FEATHER</button>
-                <button id="btn-h5" class="download-btn bigdata" data-format="h5">H5</button>
-                <button id="btn-proto" class="download-btn bigdata" data-format="proto">PROTO</button>
-            </div>
-        </div>
+        
     </div>
   </div>
 
