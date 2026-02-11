@@ -3,6 +3,7 @@ import './gerador.js'
 import './mensagemdecarregamento.js'
 import './botaosalvar.js'
 import './modal.js'
+import './salvar.js'
 
 document.querySelector('#app').innerHTML = `
  <header class="topo">
