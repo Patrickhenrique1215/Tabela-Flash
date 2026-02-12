@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
 
         const overlay = document.querySelector(".overlayspinner");
-        overlay.style.display = "flex";
 
         const rows = parseInt(document.getElementById("rows").value);
         const cols = parseInt(document.getElementById("cols").value);
@@ -16,6 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Tabela muito grande! Máximo 100 mil células.");
             return;
         }
+
+        overlay.style.display = "flex";
 
         tableResult.innerHTML = `
             <table class="tableflash">
@@ -54,33 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         requestAnimationFrame(generateChunk);
-
-
-
-        /*let table = `
-            <table class="tableflash">
-            <tbody>
-        `;
-
-        for (let i = 0; i < rows; i++) {
-            table += "<tr>";
-            for (let j = 0; j < cols; j++) {
-                table += `<td contenteditable></td>`;
-            }
-            table += "</tr>";
-        }
-
-        table += `
-            </tbody>
-            </table>
-        `;
-
-        tableResult.innerHTML = table;
-    });*/
-
-
-
-
 
     });
 });    

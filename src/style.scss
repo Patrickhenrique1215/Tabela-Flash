@@ -11,8 +11,8 @@
 }
 
 @keyframes pulse-save {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
 }
 
 @keyframes spin { 
@@ -22,26 +22,27 @@
 
 
 *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "DM Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-weight: 800;
-    animation: fadeIn 1s ease;
-    box-shadow: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 800;
+  animation: fadeIn 1s ease;
+  box-shadow: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
-/* Remove highlight azul em todos os elementos */
-* {
-  -webkit-tap-highlight-color: transparent;
+html {
+  scrollbar-gutter: stable;
 }
 
 a{
 	text-decoration: none;
 	cursor: pointer;
 }
+
 li{
 	list-style-type: none;
 }

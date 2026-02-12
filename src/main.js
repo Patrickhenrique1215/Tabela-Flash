@@ -32,7 +32,6 @@ document.querySelector('#app').innerHTML = `
       <div class="spinner"></div>
       <div class="textspinner">Aguarde...<br>Gerando tabela...</div>
     </div>
-    
   </div>  
 
   <section>
