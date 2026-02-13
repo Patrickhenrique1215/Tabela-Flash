@@ -257,6 +257,104 @@ document.addEventListener("DOMContentLoaded", () => {
         downloadFile(table, "tabelaflash.html", "text/html");
     }
 
+    //PNG
+    function exportPNG(data) {
+        const table = document.querySelector(".tableflash");
+        domtoimage.toPng(table, {
+            quality: 1,
+            bgcolor: '#ffffff',
+            width: table.scrollWidth * 2,
+            height: table.scrollHeight * 2
+        }).then(dataUrl => {
+            const link = document.createElement("a");
+            link.href = dataUrl;
+            link.download = "tabelaflash.png";
+            link.click();
+        });
+    }
+
+    //JPG
+    function exportJPG(data) {
+        const table = document.querySelector(".tableflash");
+        domtoimage.toJpeg(table, {
+            quality: 1,
+            bgcolor: '#ffffff',
+            with: table.scrollWidth * 2,
+            height: table.scrollHeight * 2
+        }).then(dataUrl => {
+            const link = document.createElement("a");
+            link.href = dataUrl;
+            link.download = "tabelaflash.jpg";
+            link.click();
+        });
+    }
+
+    //JPEG
+    function exportJPEG(data) {
+        const table = document.querySelector(".tableflash");
+        domtoimage.toJpeg(table, {
+            quality: 1,
+            bgcolor: '#ffffff',
+            with: table.scrollWidth * 2,
+            height: table.scrollHeight * 2
+        }).then(dataUrl => {
+            const link = document.createElement("a");
+            link.href = dataUrl;
+            link.download = "tabelaflash.jpeg";
+            link.click();
+        });
+    }
+
+    //WEBP
+    function exportWEBP() {
+        const table = document.querySelector(".tableflash");
+
+        domtoimage.toPng(table, {
+            quality: 1,
+            bgcolor: '#ffffff',
+            width: table.scrollWidth * 2,
+            height: table.scrollHeight * 2
+        }).then(pngDataUrl => {
+            const img = new Image();
+            img.onload = () => {
+                const canvas = document.createElement("canvas");
+                canvas.width = img.width;
+                canvas.height = img.height;
+
+                const ctx = canvas.getContext("2d");
+                ctx.drawImage(img, 0, 0);
+
+                // Converte para WEBP
+                const webpDataUrl = canvas.toDataURL("image/webp", 0.95);
+
+                const link = document.createElement("a");
+                link.href = webpDataUrl;
+                link.download = "tabelaflash.webp";
+                link.click();
+            };
+
+            img.src = pngDataUrl;
+        }).catch(err => {
+            console.error("Erro ao exportar WEBP:", err);
+        });
+    }
+
+    //SVG
+    function exportSVG(data) {
+        const table = document.querySelector(".tableflash");
+        domtoimage.toSvg(table, {
+            quality: 1,
+            bgcolor: '#ffffff',
+            with: table.scrollWidth * 2,
+            height: table.scrollHeight * 2
+        }).then(dataUrl => {
+            const link = document.createElement("a");
+            link.href = dataUrl;
+            link.download = "tabelaflash.svg";
+            link.click();
+        });
+    }
+
     // XLSX
     function exportXLSX(data) {
         const wb = XLSX.utils.book_new();
@@ -383,6 +481,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 case "html":
                     exportHTML();
                 break;
+
+                case "png":
+                    exportPNG(data);
+                break;
+
+                case "jpg":
+                    exportJPG(data);
+                break;
+
+                case "jpeg":
+                    exportJPEG(data);
+                break;
+
+                case "webp":
+                    exportWEBP(data);
+                break;    
+
+                case "svg":
+                    exportSVG(data);
+                break;    
 
                 case "xlsx":
                     exportXLSX(data);
