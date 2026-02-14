@@ -21,7 +21,7 @@ document.querySelector('#app').innerHTML = `
         </div>
 
         <div class="">
-          <button type="submit" class="btngerar">Gerar/alterar tabela</button>
+          <button type="submit" class="btngerar">Gerar tabela</button>
         </div>
       </form>
     </div>
@@ -35,7 +35,7 @@ document.querySelector('#app').innerHTML = `
   </div>  
 
   <section>
-    <div id="tableResult" class="tabelagerada"><span class="asua">A sua tabela será gerada aqui.......</span></div>
+    <div id="tableResult" class="tabelagerada" tabindex="-1"><span class="asua">A sua tabela será gerada aqui.......</span></div>
   </section>
 
   <div id="whatsapp-float" class="whatsapp-float" >
@@ -43,7 +43,7 @@ document.querySelector('#app').innerHTML = `
   </div>
 
   <div class="overlay" id="overlay">
-    <div class="modal">
+    <div class="modalsalvar">
         <div class="divclose"><button class="close" id="closeModal">x</button></div>
          <div id="group-documents" class="download-group documents">
             <h3 class="group-title">📄 Documentos</h3>
@@ -92,6 +92,10 @@ document.querySelector('#app').innerHTML = `
         
     </div>
   </div>
+
+  <footer>
+    <p>--- Tabelas prontas em minutos, sem precisar ler o manual. Sem tutoriais, sem complicações. Simples assim!</p>
+  </footer>
 
 
   

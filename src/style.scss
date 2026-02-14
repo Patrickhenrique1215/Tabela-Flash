@@ -1,3 +1,38 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 800;
+  animation: fadeIn 1s ease;
+  box-shadow: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li{
+  list-style-type: none;
+}
+
+h1, h2, h3, h4, h5{
+  font-size: 1rem; 
+}
+
+body {
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
 
 /* Animações */
 @keyframes fadeIn {
@@ -21,46 +56,9 @@
 }
 
 
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-weight: 800;
-  animation: fadeIn 1s ease;
-  box-shadow: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-html {
-  scrollbar-gutter: stable;
-}
-
-a{
-	text-decoration: none;
-	cursor: pointer;
-}
-
-li{
-	list-style-type: none;
-}
-
-:root{
-    --amareloflash: #FFF201;
-    --laranjaflash: #FF9600;
-    --douradoflash: #FFAB00;
-    --primeirovermelho: #FE0001;
-    --segundovermelho: #FD0002;
-    --terceirovermelho: #C30101;
-}
-
-body {
-    background-color: #ffffff;
-    overflow-x: hidden;
-}
-
+/* Variaveis  */ 
+$amareloflash: #fff201;
+$terceirovermelho: #c30101;
 
 
 /* ===== HEADER ===== */
@@ -154,7 +152,7 @@ body {
 .btngerar {
   border: none; 
   width: 100%;
-  background: linear-gradient(135deg, var(--amareloflash) 0%, #f7b733 100%); 
+  background: linear-gradient(135deg, $amareloflash 0%, #f7b733 100%); 
   height: 44px; 
   border-radius: 12px; 
   font-size: 1rem;
@@ -174,7 +172,7 @@ body {
   box-shadow: 
       0 8px 25px rgba(255, 193, 7, 0.4),
       0 4px 8px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(135deg, #f7b733 0%, var(--amareloflash) 100%);
+  background: linear-gradient(135deg, #f7b733 0%, $amareloflash 100%);
 }
 
 .btngerar:active {
@@ -291,7 +289,7 @@ td{
   border-radius: 50%;
   z-index: 9;
   border: none;
-  background: linear-gradient(135deg, var(--amareloflash) 0%, #f7b733 100%);
+  background: linear-gradient(135deg, $amareloflash 0%, #f7b733 100%);
   cursor: pointer;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform .18s ease;
@@ -311,7 +309,7 @@ td{
         0 16px 36px rgba(255, 193, 7, 0.45),
         0 8px 20px rgba(0, 0, 0, 0.18),
         inset 0 1px 0 rgba(255, 255, 255, 0.4);
-    background: linear-gradient(135deg, #f7b733 0%, var(--amareloflash) 100%);
+    background: linear-gradient(135deg, #f7b733 0%, $amareloflash 100%);
     outline: none;
 }
 
@@ -369,7 +367,7 @@ td{
   display: flex;
 }
 
-.modal {
+.modalsalvar {
   background: #fff;
   padding: 20px;
   border-radius: 8px;
@@ -418,7 +416,7 @@ td{
 .download-btn {
     border: none; 
     padding: 4% 10%;
-    background: linear-gradient(135deg, var(--amareloflash) 0%, #f7b733 100%); 
+    background: linear-gradient(135deg, $amareloflash 0%, #f7b733 100%); 
     border-radius: 12px; 
     font-size: 1rem;
     font-weight: 600; 
@@ -437,7 +435,7 @@ td{
     box-shadow: 
         0 8px 25px rgba(255, 193, 7, 0.4),
         0 4px 8px rgba(0, 0, 0, 0.15);
-    background: linear-gradient(135deg, #f7b733 0%, var(--amareloflash) 100%);
+    background: linear-gradient(135deg, #f7b733 0%, $amareloflash 100%);
 }
 
 .download-btn:active {
@@ -474,6 +472,14 @@ td{
     left: 100%;
 }
 
+footer{
+  margin: -40vh 4vw 20vh 4vw;
+}
+
+footer p{
+  font-size: 0.9rem;
+  font-weight: 300;
+}
 
 
 
@@ -511,7 +517,7 @@ td{
     margin-top: 30vh;
   }
 
-  .modal{
+  .modalsalvar{
     width: 50%;
   }
 
@@ -526,4 +532,7 @@ td{
 
 
 }
+
+
+
 

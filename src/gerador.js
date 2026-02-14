@@ -56,5 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         requestAnimationFrame(generateChunk);
 
+        form.reset();
+        tableResult.focus()
+
     });
 });    
