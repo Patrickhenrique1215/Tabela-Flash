@@ -20,7 +20,7 @@ document.querySelector('#app').innerHTML = `
           <input type="number" id="cols" class="inputflash" min="1" required >
         </div>
 
-        <div class="">
+        <div class="buttondegerar">
           <button type="submit" class="btngerar">Gerar tabela</button>
         </div>
       </form>
@@ -44,7 +44,7 @@ document.querySelector('#app').innerHTML = `
 
   <div class="overlay" id="overlay">
     <div class="modalsalvar">
-        <div class="divclose"><button class="close" id="closeModal">x</button></div>
+         <div class="divclose"><button class="close" id="closeModal">x</button></div>
          <div id="group-documents" class="download-group documents">
             <h3 class="group-title">📄 Documentos</h3>
             <div class="button-group">
