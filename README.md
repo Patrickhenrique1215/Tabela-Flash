@@ -15,6 +15,7 @@ Basta escolher a quantidade de **linhas** e **colunas**, e o sistema cria automa
 ---
 
 ## 📂 Estrutura de pastas e arquivos
+```
 .
 ├── index.html
 ├── public
@@ -27,7 +28,7 @@ Basta escolher a quantidade de **linhas** e **colunas**, e o sistema cria automa
     ├── modal.js
     ├── salvar.js
     └── style.scss
-
+```
 ---
 
 ## ⚙️ Funcionalidades atuais
