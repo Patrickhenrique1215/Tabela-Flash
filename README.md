@@ -19,15 +19,14 @@ Basta escolher a quantidade de **linhas** e **colunas**, e o sistema cria automa
 ├── index.html
 ├── public
 │   └── imagens/
-├── src
-│   ├── botaosalvar.js
-│   ├── gerador.js
-│   ├── main.js
-│   ├── mensagemdecarregamento.js
-│   ├── modal.js
-│   ├── salvar.js
-│   └── style.scss
-
+└── src
+    ├── botaosalvar.js
+    ├── gerador.js
+    ├── main.js
+    ├── mensagemdecarregamento.js
+    ├── modal.js
+    ├── salvar.js
+    └── style.scss
 
 ---
 
